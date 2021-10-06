@@ -9,7 +9,7 @@ package leetcode.sirius.oct;
 
 import java.util.Arrays;
 
-public class ThirdNum {
+public class ThirdMaxNum {
 
 	public static void main(String[] args) {
 		int[] arr = { 4, 5, 6, 6, 2, 2, 3, 1 };//输入数组
