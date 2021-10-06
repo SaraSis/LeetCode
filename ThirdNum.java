@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class ThirdNum {
 
 	public static void main(String[] args) {
-		int[] arr = { 4, 5, 6, 6, 2, 2, 3, 1 };
+		int[] arr = { 4, 5, 6, 6, 2, 2, 3, 1 };//输入数组
 
 		Solution solve = new Solution();
 
@@ -23,18 +23,18 @@ public class ThirdNum {
 
 class Solution {
 	public int thirdMax(int[] nums) {
-		Arrays.sort(nums);
+		Arrays.sort(nums);//先排序
 		int flag = 1;
-		int Max = nums[nums.length - 1];
-		for (int i = nums.length - 1; i >= 1; i--) {
+		int Max = nums[nums.length - 1];//初始化为最大值
+		for (int i = nums.length - 1; i >= 1; i--) {//从后往前遍历
 			if (nums[i] > nums[i - 1]) {
 				flag++;
 			}
-			if (flag == 3) {
+			if (flag == 3) {//遇到第三大的数结束循环
 				Max = nums[i - 1];
 				break;
 			}
 		}
-		return Max;
+		return Max;//若没有第三大的数，则返回Max初始化时候得到的最大值
 	}
 }
